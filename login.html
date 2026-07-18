@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Login - StudentHub Portal</title>
+  <meta name="description" content="Sign in to your StudentHub portal to access attendance, schedules, grading tables, and notifications.">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Skip to Content Link -->
+  <a href="#main-content" class="skip-link">Skip to Main Content</a>
+
+  <!-- Header Section -->
+  <div class="header-wrapper">
+    <header class="container">
+      <nav class="navbar" aria-label="Main Navigation">
+        <a href="index.html" class="logo-link">
+          <img src="images/logo.png" alt="StudentHub Logo" class="logo-img">
+          <span class="logo-text">Student<span>Hub</span></span>
+        </a>
+        
+        <!-- Accessible Mobile Menu Toggle -->
+        <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+        <label for="menu-toggle" class="menu-toggle-label" aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+        
+        <ul class="nav-menu">
+          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="register.html" class="nav-link">Register</a></li>
+          <li class="nav-item"><a href="login.html" class="nav-link active">Login</a></li>
+          <li class="nav-item"><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+          <li class="nav-item"><a href="events.html" class="nav-link">Events</a></li>
+          <li class="nav-item"><a href="profile.html" class="nav-link">Profile</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+          <li class="nav-item"><a href="admin.html" class="nav-link">Admin</a></li>
+          <li class="nav-item"><a href="faq.html" class="nav-link">FAQ</a></li>
+          <li class="nav-item"><a href="feedback.html" class="nav-link">Feedback</a></li>
+        </ul>
+      </nav>
+    </header>
+  </div>
+
+  <!-- Breadcrumbs -->
+  <div class="breadcrumbs-wrapper">
+    <nav class="container breadcrumbs" aria-label="Breadcrumb">
+      <div class="breadcrumb-item"><a href="index.html">Home</a></div>
+      <div class="breadcrumb-item active" aria-current="page">Portal Login</div>
+    </nav>
+  </div>
+
+  <!-- Main Content Area -->
+  <main id="main-content" class="container" style="display: flex; align-items: center; justify-content: center; min-height: 70vh; margin-top: 30px; margin-bottom: 30px;">
+    <div class="form-container" style="width: 100%; max-width: 480px; margin: 0; padding: 40px;">
+      <div style="text-align: center; margin-bottom: 30px;">
+        <h1 style="font-size: 2rem; margin-bottom: 10px;">Welcome Back</h1>
+        <p style="color: var(--text-secondary); font-size: 0.95rem;">Enter your university credentials to sign in.</p>
+      </div>
+
+      <form action="dashboard.html" method="GET" autocomplete="on">
+        <!-- Email Input -->
+        <div class="form-group">
+          <label for="login-email" class="form-label">Institutional Email Address<span class="required" aria-hidden="true">*</span></label>
+          <input type="email" id="login-email" name="email" class="form-control" placeholder="e.g. student@college.edu" required aria-required="true" autocomplete="username">
+        </div>
+
+        <!-- Password Input -->
+        <div class="form-group" style="margin-bottom: 15px;">
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <label for="login-password" class="form-label">Password<span class="required" aria-hidden="true">*</span></label>
+            <a href="faq.html" style="font-size: 0.8rem; color: var(--accent-cyan); font-weight: 500;" tabindex="0">Forgot Password?</a>
+          </div>
+          <input type="password" id="login-password" name="password" class="form-control" placeholder="Enter your portal password" required aria-required="true" autocomplete="current-password">
+        </div>
+
+        <!-- Remember Me Checkbox -->
+        <div class="form-checkbox-label" style="margin-bottom: 25px;">
+          <input type="checkbox" id="login-remember" name="remember">
+          <label for="login-remember">Remember me on this browser</label>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="btn btn-primary" style="width: 100%; font-size: 1.05rem; padding: 14px;"><i class="fa-solid fa-arrow-right-to-bracket"></i> Sign In</button>
+      </form>
+
+      <!-- Account Registration Link -->
+      <div style="text-align: center; margin-top: 30px; border-top: 1px solid rgba(255, 255, 255, 0.05); padding-top: 20px;">
+        <p style="color: var(--text-secondary); font-size: 0.9rem;">
+          New to StudentHub? <a href="register.html" style="font-weight: 600;">Create an account now</a>
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <a href="index.html" class="logo-link">
+          <img src="images/logo.png" alt="StudentHub Logo" class="logo-img">
+          <span class="logo-text">Student<span>Hub</span></span>
+        </a>
+        <p class="footer-about-text">
+          StudentHub is a unified academic dashboard built to enhance the college experience. Access assignments, marks, attendance, events, and college notifications in a modern, streamlined environment.
+        </p>
+      </div>
+      <div class="footer-col">
+        <h2 class="footer-col-title">Quick Links</h2>
+        <ul class="footer-links">
+          <li><a href="index.html"><i class="fa-solid fa-chevron-right"></i> Home</a></li>
+          <li><a href="about.html"><i class="fa-solid fa-chevron-right"></i> About</a></li>
+          <li><a href="register.html"><i class="fa-solid fa-chevron-right"></i> Register</a></li>
+          <li><a href="login.html"><i class="fa-solid fa-chevron-right"></i> Login</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h2 class="footer-col-title">Portal Services</h2>
+        <ul class="footer-links">
+          <li><a href="dashboard.html"><i class="fa-solid fa-chevron-right"></i> Dashboard</a></li>
+          <li><a href="events.html"><i class="fa-solid fa-chevron-right"></i> Events</a></li>
+          <li><a href="profile.html"><i class="fa-solid fa-chevron-right"></i> Profile</a></li>
+          <li><a href="admin.html"><i class="fa-solid fa-chevron-right"></i> Admin Panel</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h2 class="footer-col-title">Support</h2>
+        <ul class="footer-contact-list">
+          <li><i class="fa-solid fa-location-dot"></i> College Campus Road, Sector 15, Cityville</li>
+          <li><i class="fa-solid fa-phone"></i> +1 (555) 019-2834</li>
+          <li><i class="fa-solid fa-envelope"></i> support@studenthub.edu</li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 StudentHub Academic Portal. All Rights Reserved. Designed for College Practical.</p>
+      <div class="footer-links" style="flex-direction: row; gap: 20px;">
+        <a href="faq.html">FAQ</a>
+        <a href="feedback.html">Feedback</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Back to Top Button -->
+  <a href="#" class="back-to-top" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </a>
+</body>
+</html>

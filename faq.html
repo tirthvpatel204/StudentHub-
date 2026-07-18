@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frequently Asked Questions - StudentHub Portal</title>
+  <meta name="description" content="Find answers to portal registration, password recovery, course registrations, fee payments, and technical issues on StudentHub.">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Skip to Content Link -->
+  <a href="#main-content" class="skip-link">Skip to Main Content</a>
+
+  <!-- Header Section -->
+  <div class="header-wrapper">
+    <header class="container">
+      <nav class="navbar" aria-label="Main Navigation">
+        <a href="index.html" class="logo-link">
+          <img src="images/logo.png" alt="StudentHub Logo" class="logo-img">
+          <span class="logo-text">Student<span>Hub</span></span>
+        </a>
+        
+        <!-- Accessible Mobile Menu Toggle -->
+        <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+        <label for="menu-toggle" class="menu-toggle-label" aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+        
+        <ul class="nav-menu">
+          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="register.html" class="nav-link">Register</a></li>
+          <li class="nav-item"><a href="login.html" class="nav-link">Login</a></li>
+          <li class="nav-item"><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+          <li class="nav-item"><a href="events.html" class="nav-link">Events</a></li>
+          <li class="nav-item"><a href="profile.html" class="nav-link">Profile</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+          <li class="nav-item"><a href="admin.html" class="nav-link">Admin</a></li>
+          <li class="nav-item"><a href="faq.html" class="nav-link active">FAQ</a></li>
+          <li class="nav-item"><a href="feedback.html" class="nav-link">Feedback</a></li>
+        </ul>
+      </nav>
+    </header>
+  </div>
+
+  <!-- Breadcrumbs -->
+  <div class="breadcrumbs-wrapper">
+    <nav class="container breadcrumbs" aria-label="Breadcrumb">
+      <div class="breadcrumb-item"><a href="index.html">Home</a></div>
+      <div class="breadcrumb-item active" aria-current="page">Support FAQs</div>
+    </nav>
+  </div>
+
+  <!-- Main System Layout -->
+  <main id="main-content" class="container system-layout">
+    <!-- Sidebar FAQ categories -->
+    <aside class="system-sidebar" aria-label="FAQ Categories Navigation">
+      <h2 class="sidebar-title">FAQ Sections</h2>
+      <nav aria-label="Sidebar FAQ Sections">
+        <ul class="sidebar-menu">
+          <li><a href="#section-general" class="sidebar-link active"><i class="fa-solid fa-circle-info"></i> General Queries</a></li>
+          <li><a href="#section-academic" class="sidebar-link"><i class="fa-solid fa-graduation-cap"></i> Academics & Courses</a></li>
+          <li><a href="#section-technical" class="sidebar-link"><i class="fa-solid fa-shield-halved"></i> Technical & Account</a></li>
+          <li><a href="#section-fees" class="sidebar-link"><i class="fa-solid fa-wallet"></i> Fees & Payments</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Accordions Panel -->
+    <section class="system-content" aria-labelledby="faq-title">
+      <div style="margin-bottom: 25px;">
+        <h1 id="faq-title" style="font-size: 1.8rem; margin-bottom: 5px;">Support FAQ Center</h1>
+        <p style="color: var(--text-secondary);">Browse our catalog of frequently asked questions regarding the StudentHub intranet workspace.</p>
+      </div>
+
+      <!-- FAQ Section: General -->
+      <section id="section-general" aria-labelledby="heading-general" style="margin-bottom: 40px;">
+        <h2 id="heading-general" style="font-size: 1.3rem; color: var(--accent-cyan); margin-bottom: 15px; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 8px;"><i class="fa-solid fa-circle-info"></i> General Questions</h2>
+        
+        <div class="accordion">
+          <details class="accordion-item" open>
+            <summary class="accordion-summary">What is StudentHub?</summary>
+            <div class="accordion-content">
+              <p>StudentHub is a consolidated college student portal designed as a semester project. It integrates registrations, syllabus databases, schedule sheets, and support modules into a single accessible workspace.</p>
+            </div>
+          </details>
+
+          <details class="accordion-item">
+            <summary class="accordion-summary">How do I obtain support if I encounter a portal bug?</summary>
+            <div class="accordion-content">
+              <p>You can file an official helpdesk ticket on the <a href="contact.html">Contact Us</a> page. Choose the "Technical glitch" subject, outline the issue, and provide your university registration ID.</p>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <!-- FAQ Section: Academic -->
+      <section id="section-academic" aria-labelledby="heading-academic" style="margin-bottom: 40px;">
+        <h2 id="heading-academic" style="font-size: 1.3rem; color: var(--accent-cyan); margin-bottom: 15px; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 8px;"><i class="fa-solid fa-graduation-cap"></i> Academic & Course Regulations</h2>
+        
+        <div class="accordion">
+          <details class="accordion-item">
+            <summary class="accordion-summary">How is semester attendance computed on the dashboard?</summary>
+            <div class="accordion-content">
+              <p>Attendance is computed based on daily RFID check-ins at laboratory entries and lecturer rolls. Class records update every 24 hours onto the active <a href="dashboard.html">Student Dashboard</a> metrics.</p>
+            </div>
+          </details>
+
+          <details class="accordion-item">
+            <summary class="accordion-summary">Where do I find details about elective courses syllabus?</summary>
+            <div class="accordion-content">
+              <p>Elective syllabus copies and prerequisite qualifications can be obtained by reading the portal guides on the <a href="about.html">About Page</a> or checking corresponding department files in the library.</p>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <!-- FAQ Section: Technical -->
+      <section id="section-technical" aria-labelledby="heading-technical" style="margin-bottom: 40px;">
+        <h2 id="heading-technical" style="font-size: 1.3rem; color: var(--accent-cyan); margin-bottom: 15px; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 8px;"><i class="fa-solid fa-shield-halved"></i> Technical Support & Security</h2>
+        
+        <div class="accordion">
+          <details class="accordion-item">
+            <summary class="accordion-summary">How do I change my registered password?</summary>
+            <div class="accordion-content">
+              <p>Access your settings on the <a href="profile.html">Student Profile</a>, navigate to the password section, enter your current institutional password, and specify a new secure character combination.</p>
+            </div>
+          </details>
+
+          <details class="accordion-item">
+            <summary class="accordion-summary">What should I do if my registration application is pending review?</summary>
+            <div class="accordion-content">
+              <p>New profile registrations go through dean office moderation. Verification is usually completed in 2 days. If it exceeds 3 days, please mail your records to the registrar office.</p>
+            </div>
+          </details>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <a href="index.html" class="logo-link">
+          <img src="images/logo.png" alt="StudentHub Logo" class="logo-img">
+          <span class="logo-text">Student<span>Hub</span></span>
+        </a>
+        <p class="footer-about-text">
+          StudentHub is a unified academic dashboard built to enhance the college experience. Access assignments, marks, attendance, events, and college notifications in a modern, streamlined environment.
+        </p>
+      </div>
+      <div class="footer-col">
+        <h2 class="footer-col-title">Quick Links</h2>
+        <ul class="footer-links">
+          <li><a href="index.html"><i class="fa-solid fa-chevron-right"></i> Home</a></li>
+          <li><a href="about.html"><i class="fa-solid fa-chevron-right"></i> About</a></li>
+          <li><a href="register.html"><i class="fa-solid fa-chevron-right"></i> Register</a></li>
+          <li><a href="login.html"><i class="fa-solid fa-chevron-right"></i> Login</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h2 class="footer-col-title">Portal Services</h2>
+        <ul class="footer-links">
+          <li><a href="dashboard.html"><i class="fa-solid fa-chevron-right"></i> Dashboard</a></li>
+          <li><a href="events.html"><i class="fa-solid fa-chevron-right"></i> Events</a></li>
+          <li><a href="profile.html"><i class="fa-solid fa-chevron-right"></i> Profile</a></li>
+          <li><a href="admin.html"><i class="fa-solid fa-chevron-right"></i> Admin Panel</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h2 class="footer-col-title">Support</h2>
+        <ul class="footer-contact-list">
+          <li><i class="fa-solid fa-location-dot"></i> College Campus Road, Sector 15, Cityville</li>
+          <li><i class="fa-solid fa-phone"></i> +1 (555) 019-2834</li>
+          <li><i class="fa-solid fa-envelope"></i> support@studenthub.edu</li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 StudentHub Academic Portal. All Rights Reserved. Designed for College Practical.</p>
+      <div class="footer-links" style="flex-direction: row; gap: 20px;">
+        <a href="faq.html">FAQ</a>
+        <a href="feedback.html">Feedback</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Back to Top Button -->
+  <a href="#" class="back-to-top" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </a>
+</body>
+</html>

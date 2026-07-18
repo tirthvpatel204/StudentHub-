@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Registration - StudentHub Portal</title>
+  <meta name="description" content="Register as a student on StudentHub. Fill out personal, academic, and security details to request access to the college portal.">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Skip to Content Link -->
+  <a href="#main-content" class="skip-link">Skip to Main Content</a>
+
+  <!-- Header Section -->
+  <div class="header-wrapper">
+    <header class="container">
+      <nav class="navbar" aria-label="Main Navigation">
+        <a href="index.html" class="logo-link">
+          <img src="images/logo.png" alt="StudentHub Logo" class="logo-img">
+          <span class="logo-text">Student<span>Hub</span></span>
+        </a>
+        
+        <!-- Accessible Mobile Menu Toggle -->
+        <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+        <label for="menu-toggle" class="menu-toggle-label" aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+        
+        <ul class="nav-menu">
+          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="register.html" class="nav-link active">Register</a></li>
+          <li class="nav-item"><a href="login.html" class="nav-link">Login</a></li>
+          <li class="nav-item"><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+          <li class="nav-item"><a href="events.html" class="nav-link">Events</a></li>
+          <li class="nav-item"><a href="profile.html" class="nav-link">Profile</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+          <li class="nav-item"><a href="admin.html" class="nav-link">Admin</a></li>
+          <li class="nav-item"><a href="faq.html" class="nav-link">FAQ</a></li>
+          <li class="nav-item"><a href="feedback.html" class="nav-link">Feedback</a></li>
+        </ul>
+      </nav>
+    </header>
+  </div>
+
+  <!-- Breadcrumbs -->
+  <div class="breadcrumbs-wrapper">
+    <nav class="container breadcrumbs" aria-label="Breadcrumb">
+      <div class="breadcrumb-item"><a href="index.html">Home</a></div>
+      <div class="breadcrumb-item active" aria-current="page">Student Registration</div>
+    </nav>
+  </div>
+
+  <!-- Main Content Area -->
+  <main id="main-content" class="container">
+    <div class="form-container">
+      <div style="text-align: center; margin-bottom: 30px;">
+        <h1 style="font-size: 2rem; margin-bottom: 10px;">Student Registration</h1>
+        <p style="color: var(--text-secondary);">Fill in your credentials to join the university intranet portal.</p>
+      </div>
+
+      <form action="#" method="POST" autocomplete="on">
+        
+        <!-- Personal Information Section -->
+        <fieldset class="form-fieldset">
+          <legend class="form-legend"><i class="fa-solid fa-user-check"></i> Personal Details</legend>
+          
+          <div class="form-group-grid">
+            <div class="form-group">
+              <label for="reg-fullname" class="form-label">Full Name<span class="required" aria-hidden="true">*</span></label>
+              <input type="text" id="reg-fullname" name="fullname" class="form-control" placeholder="e.g. Johnathan Doe" required aria-required="true">
+            </div>
+
+            <div class="form-group">
+              <label for="reg-dob" class="form-label">Date of Birth<span class="required" aria-hidden="true">*</span></label>
+              <input type="date" id="reg-dob" name="dob" class="form-control" required aria-required="true">
+            </div>
+
+            <div class="form-group">
+              <label id="gender-group-label" class="form-label">Gender<span class="required" aria-hidden="true">*</span></label>
+              <div class="form-radio-group" role="radiogroup" aria-labelledby="gender-group-label">
+                <label class="form-radio-label">
+                  <input type="radio" name="gender" value="male" required aria-required="true"> Male
+                </label>
+                <label class="form-radio-label">
+                  <input type="radio" name="gender" value="female"> Female
+                </label>
+                <label class="form-radio-label">
+                  <input type="radio" name="gender" value="other"> Other
+                </label>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="reg-phone" class="form-label">Phone Number<span class="required" aria-hidden="true">*</span></label>
+              <input type="tel" id="reg-phone" name="phone" class="form-control" placeholder="e.g. 555-019-2834" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required aria-required="true" aria-describedby="phone-helper">
+              <span id="phone-helper" class="form-helper-text">Format: 123-456-7890</span>
+            </div>
+          </div>
+
+          <div class="form-group form-group-full" style="margin-top: 15px;">
+            <label for="reg-address" class="form-label">Residential Address<span class="required" aria-hidden="true">*</span></label>
+            <textarea id="reg-address" name="address" class="form-control" rows="3" placeholder="Street name, Apartment, City, Postal Code" required aria-required="true"></textarea>
+          </div>
+        </fieldset>
+
+        <!-- Academic Information Section -->
+        <fieldset class="form-fieldset">
+          <legend class="form-legend"><i class="fa-solid fa-graduation-cap"></i> Academic Details</legend>
+          
+          <div class="form-group-grid">
+            <div class="form-group">
+              <label for="reg-enrollment" class="form-label">Enrollment Number<span class="required" aria-hidden="true">*</span></label>
+              <input type="text" id="reg-enrollment" name="enrollment" class="form-control" placeholder="e.g. EN1092834" required aria-required="true" aria-describedby="enrollment-helper">
+              <span id="enrollment-helper" class="form-helper-text">Your unique university identification code.</span>
+            </div>
+
+            <div class="form-group">
+              <label for="reg-email" class="form-label">Institutional Email<span class="required" aria-hidden="true">*</span></label>
+              <input type="email" id="reg-email" name="email" class="form-control" placeholder="e.g. student@college.edu" required aria-required="true">
+            </div>
+
+            <div class="form-group">
+              <label for="reg-dept" class="form-label">Department / Major<span class="required" aria-hidden="true">*</span></label>
+              <select id="reg-dept" name="department" class="form-control" required aria-required="true">
+                <option value="" disabled selected>Select Department</option>
+                <option value="cse">Computer Science & Engineering</option>
+                <option value="ece">Electronics & Communication</option>
+                <option value="me">Mechanical Engineering</option>
+                <option value="it">Information Technology</option>
+                <option value="civil">Civil Engineering</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="reg-semester" class="form-label">Active Semester<span class="required" aria-hidden="true">*</span></label>
+              <select id="reg-semester" name="semester" class="form-control" required aria-required="true">
+                <option value="" disabled selected>Select Semester</option>
+                <option value="1">Semester 1</option>
+                <option value="2">Semester 2</option>
+                <option value="3">Semester 3</option>
+                <option value="4">Semester 4</option>
+                <option value="5">Semester 5</option>
+                <option value="6">Semester 6</option>
+                <option value="7">Semester 7</option>
+                <option value="8">Semester 8</option>
+              </select>
+            </div>
+          </div>
+        </fieldset>
+
+        <!-- Security Section -->
+        <fieldset class="form-fieldset">
+          <legend class="form-legend"><i class="fa-solid fa-lock"></i> Security & Password</legend>
+          
+          <div class="form-group-grid">
+            <div class="form-group">
+              <label for="reg-password" class="form-label">Password<span class="required" aria-hidden="true">*</span></label>
+              <input type="password" id="reg-password" name="password" class="form-control" placeholder="Minimum 8 characters" required aria-required="true" aria-describedby="password-helper">
+              <span id="password-helper" class="form-helper-text">Must contain at least 1 uppercase, 1 special symbol.</span>
+            </div>
+
+            <div class="form-group">
+              <label for="reg-confirm" class="form-label">Confirm Password<span class="required" aria-hidden="true">*</span></label>
+              <input type="password" id="reg-confirm" name="confirm_password" class="form-control" placeholder="Re-type your password" required aria-required="true">
+            </div>
+          </div>
+        </fieldset>
+
+        <div class="form-checkbox-label" style="margin-bottom: 20px;">
+          <input type="checkbox" id="reg-terms" name="terms" required aria-required="true">
+          <label for="reg-terms">I accept the university's honor code and data privacy rules.</label>
+        </div>
+
+        <div class="form-actions">
+          <button type="reset" class="btn btn-reset"><i class="fa-solid fa-rotate-left"></i> Reset Form</button>
+          <button type="submit" class="btn btn-primary"><i class="fa-solid fa-paper-plane"></i> Submit Registration</button>
+        </div>
+      </form>
+
+      <div style="text-align: center; margin-top: 30px; border-top: 1px solid rgba(255, 255, 255, 0.05); padding-top: 20px;">
+        <p style="color: var(--text-secondary); font-size: 0.9rem;">
+          Already registered? <a href="login.html" style="font-weight: 600;">Sign in to your account</a>
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <a href="index.html" class="logo-link">
+          <img src="images/logo.png" alt="StudentHub Logo" class="logo-img">
+          <span class="logo-text">Student<span>Hub</span></span>
+        </a>
+        <p class="footer-about-text">
+          StudentHub is a unified academic dashboard built to enhance the college experience. Access assignments, marks, attendance, events, and college notifications in a modern, streamlined environment.
+        </p>
+      </div>
+      <div class="footer-col">
+        <h2 class="footer-col-title">Quick Links</h2>
+        <ul class="footer-links">
+          <li><a href="index.html"><i class="fa-solid fa-chevron-right"></i> Home</a></li>
+          <li><a href="about.html"><i class="fa-solid fa-chevron-right"></i> About</a></li>
+          <li><a href="register.html"><i class="fa-solid fa-chevron-right"></i> Register</a></li>
+          <li><a href="login.html"><i class="fa-solid fa-chevron-right"></i> Login</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h2 class="footer-col-title">Portal Services</h2>
+        <ul class="footer-links">
+          <li><a href="dashboard.html"><i class="fa-solid fa-chevron-right"></i> Dashboard</a></li>
+          <li><a href="events.html"><i class="fa-solid fa-chevron-right"></i> Events</a></li>
+          <li><a href="profile.html"><i class="fa-solid fa-chevron-right"></i> Profile</a></li>
+          <li><a href="admin.html"><i class="fa-solid fa-chevron-right"></i> Admin Panel</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h2 class="footer-col-title">Support</h2>
+        <ul class="footer-contact-list">
+          <li><i class="fa-solid fa-location-dot"></i> College Campus Road, Sector 15, Cityville</li>
+          <li><i class="fa-solid fa-phone"></i> +1 (555) 019-2834</li>
+          <li><i class="fa-solid fa-envelope"></i> support@studenthub.edu</li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 StudentHub Academic Portal. All Rights Reserved. Designed for College Practical.</p>
+      <div class="footer-links" style="flex-direction: row; gap: 20px;">
+        <a href="faq.html">FAQ</a>
+        <a href="feedback.html">Feedback</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Back to Top Button -->
+  <a href="#" class="back-to-top" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </a>
+</body>
+</html>

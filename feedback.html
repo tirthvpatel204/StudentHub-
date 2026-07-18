@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Feedback - StudentHub Portal</title>
+  <meta name="description" content="Share your experience using the StudentHub academic portal. Rate features, submit recommendations, and leave design suggestions.">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Skip to Content Link -->
+  <a href="#main-content" class="skip-link">Skip to Main Content</a>
+
+  <!-- Header Section -->
+  <div class="header-wrapper">
+    <header class="container">
+      <nav class="navbar" aria-label="Main Navigation">
+        <a href="index.html" class="logo-link">
+          <img src="images/logo.png" alt="StudentHub Logo" class="logo-img">
+          <span class="logo-text">Student<span>Hub</span></span>
+        </a>
+        
+        <!-- Accessible Mobile Menu Toggle -->
+        <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+        <label for="menu-toggle" class="menu-toggle-label" aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+        
+        <ul class="nav-menu">
+          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="register.html" class="nav-link">Register</a></li>
+          <li class="nav-item"><a href="login.html" class="nav-link">Login</a></li>
+          <li class="nav-item"><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+          <li class="nav-item"><a href="events.html" class="nav-link">Events</a></li>
+          <li class="nav-item"><a href="profile.html" class="nav-link">Profile</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+          <li class="nav-item"><a href="admin.html" class="nav-link">Admin</a></li>
+          <li class="nav-item"><a href="faq.html" class="nav-link">FAQ</a></li>
+          <li class="nav-item"><a href="feedback.html" class="nav-link active">Feedback</a></li>
+        </ul>
+      </nav>
+    </header>
+  </div>
+
+  <!-- Breadcrumbs -->
+  <div class="breadcrumbs-wrapper">
+    <nav class="container breadcrumbs" aria-label="Breadcrumb">
+      <div class="breadcrumb-item"><a href="index.html">Home</a></div>
+      <div class="breadcrumb-item active" aria-current="page">Portal Feedback</div>
+    </nav>
+  </div>
+
+  <!-- Main Content Area -->
+  <main id="main-content" class="container">
+    <div class="form-container">
+      <div style="text-align: center; margin-bottom: 30px;">
+        <h1 style="font-size: 2rem; margin-bottom: 10px;">Portal Feedback</h1>
+        <p style="color: var(--text-secondary);">Help us improve the StudentHub workspace experience by sharing your suggestions.</p>
+      </div>
+
+      <form action="#" method="POST">
+        <!-- Student Identity Group -->
+        <fieldset class="form-fieldset">
+          <legend class="form-legend"><i class="fa-solid fa-id-card"></i> Student Details</legend>
+          
+          <div class="form-group-grid">
+            <div class="form-group">
+              <label for="fb-name" class="form-label">Full Name (Optional)</label>
+              <input type="text" id="fb-name" name="student_name" class="form-control" placeholder="e.g. Johnathan Doe">
+            </div>
+
+            <div class="form-group">
+              <label for="fb-enrollment" class="form-label">Enrollment ID (Optional)</label>
+              <input type="text" id="fb-enrollment" name="student_id" class="form-control" placeholder="e.g. EN1092834">
+            </div>
+          </div>
+        </fieldset>
+
+        <!-- Experience Survey Group -->
+        <fieldset class="form-fieldset">
+          <legend class="form-legend"><i class="fa-solid fa-star"></i> Portal Rating & Experience</legend>
+          
+          <!-- Rating stars (styled in CSS using radio buttons) -->
+          <div class="form-group">
+            <span class="form-label" id="rating-stars-lbl">Rate Your Experience using StudentHub<span class="required" aria-hidden="true">*</span></span>
+            <div class="star-rating" role="radiogroup" aria-labelledby="rating-stars-lbl">
+              <input type="radio" id="star5" name="rating" value="5" required aria-required="true"><label for="star5" title="Excellent"><i class="fa-solid fa-star"></i></label>
+              <input type="radio" id="star4" name="rating" value="4"><label for="star4" title="Good"><i class="fa-solid fa-star"></i></label>
+              <input type="radio" id="star3" name="rating" value="3"><label for="star3" title="Average"><i class="fa-solid fa-star"></i></label>
+              <input type="radio" id="star2" name="rating" value="2"><label for="star2" title="Poor"><i class="fa-solid fa-star"></i></label>
+              <input type="radio" id="star1" name="rating" value="1"><label for="star1" title="Very Bad"><i class="fa-solid fa-star"></i></label>
+            </div>
+          </div>
+
+          <!-- Overall Experience Slider/Scale -->
+          <div class="form-group" style="margin-top: 15px;">
+            <label for="fb-scale" class="form-label">Rate Interface Usability Scale (1-10)<span class="required" aria-hidden="true">*</span></label>
+            <div style="display: flex; align-items: center; gap: 15px;">
+              <span style="font-size: 0.85rem; color: var(--text-muted);">Confusing</span>
+              <input type="range" id="fb-scale" name="usability_scale" min="1" max="10" value="8" class="form-control" style="padding: 0; cursor: pointer; height: 8px;" aria-valuemin="1" aria-valuemax="10" aria-valuenow="8">
+              <span style="font-size: 0.85rem; color: var(--accent-cyan);">Very Clean</span>
+            </div>
+          </div>
+
+          <!-- Feature recommendation radio buttons -->
+          <div class="form-group" style="margin-top: 15px;">
+            <label id="recommend-group-label" class="form-label">Would you recommend StudentHub to other departments?<span class="required" aria-hidden="true">*</span></label>
+            <div class="form-radio-group" role="radiogroup" aria-labelledby="recommend-group-label">
+              <label class="form-radio-label">
+                <input type="radio" name="recommend" value="yes" checked required aria-required="true"> Definitely
+              </label>
+              <label class="form-radio-label">
+                <input type="radio" name="recommend" value="maybe"> Maybe
+              </label>
+              <label class="form-radio-label">
+                <input type="radio" name="recommend" value="no"> No
+              </label>
+            </div>
+          </div>
+        </fieldset>
+
+        <!-- Comments Group -->
+        <fieldset class="form-fieldset">
+          <legend class="form-legend"><i class="fa-solid fa-pen-nib"></i> Suggestions & Feedback</legend>
+          
+          <div class="form-group">
+            <label for="fb-suggestions" class="form-label">What features or design tweaks would you like to see next?<span class="required" aria-hidden="true">*</span></label>
+            <textarea id="fb-suggestions" name="suggestions" class="form-control" rows="5" placeholder="Let us know your recommendations about colors, menu items, or dashboard elements..." required aria-required="true"></textarea>
+          </div>
+        </fieldset>
+
+        <div class="form-actions">
+          <button type="reset" class="btn btn-reset"><i class="fa-solid fa-rotate-left"></i> Reset Form</button>
+          <button type="submit" class="btn btn-primary"><i class="fa-solid fa-paper-plane"></i> Submit Feedback</button>
+        </div>
+      </form>
+
+    </div>
+  </main>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <a href="index.html" class="logo-link">
+          <img src="images/logo.png" alt="StudentHub Logo" class="logo-img">
+          <span class="logo-text">Student<span>Hub</span></span>
+        </a>
+        <p class="footer-about-text">
+          StudentHub is a unified academic dashboard built to enhance the college experience. Access assignments, marks, attendance, events, and college notifications in a modern, streamlined environment.
+        </p>
+      </div>
+      <div class="footer-col">
+        <h2 class="footer-col-title">Quick Links</h2>
+        <ul class="footer-links">
+          <li><a href="index.html"><i class="fa-solid fa-chevron-right"></i> Home</a></li>
+          <li><a href="about.html"><i class="fa-solid fa-chevron-right"></i> About</a></li>
+          <li><a href="register.html"><i class="fa-solid fa-chevron-right"></i> Register</a></li>
+          <li><a href="login.html"><i class="fa-solid fa-chevron-right"></i> Login</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h2 class="footer-col-title">Portal Services</h2>
+        <ul class="footer-links">
+          <li><a href="dashboard.html"><i class="fa-solid fa-chevron-right"></i> Dashboard</a></li>
+          <li><a href="events.html"><i class="fa-solid fa-chevron-right"></i> Events</a></li>
+          <li><a href="profile.html"><i class="fa-solid fa-chevron-right"></i> Profile</a></li>
+          <li><a href="admin.html"><i class="fa-solid fa-chevron-right"></i> Admin Panel</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h2 class="footer-col-title">Support</h2>
+        <ul class="footer-contact-list">
+          <li><i class="fa-solid fa-location-dot"></i> College Campus Road, Sector 15, Cityville</li>
+          <li><i class="fa-solid fa-phone"></i> +1 (555) 019-2834</li>
+          <li><i class="fa-solid fa-envelope"></i> support@studenthub.edu</li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 StudentHub Academic Portal. All Rights Reserved. Designed for College Practical.</p>
+      <div class="footer-links" style="flex-direction: row; gap: 20px;">
+        <a href="faq.html">FAQ</a>
+        <a href="feedback.html">Feedback</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Back to Top Button -->
+  <a href="#" class="back-to-top" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </a>
+</body>
+</html>

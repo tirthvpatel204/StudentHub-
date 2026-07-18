@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard - StudentHub Portal</title>
+  <meta name="description" content="Access administration settings, moderate registered students list, announce events, and publish deans notices on StudentHub.">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Skip to Content Link -->
+  <a href="#main-content" class="skip-link">Skip to Main Content</a>
+
+  <!-- Header Section -->
+  <div class="header-wrapper">
+    <header class="container">
+      <nav class="navbar" aria-label="Main Navigation">
+        <a href="index.html" class="logo-link">
+          <img src="images/logo.png" alt="StudentHub Logo" class="logo-img">
+          <span class="logo-text">Student<span>Hub</span></span>
+        </a>
+        
+        <!-- Accessible Mobile Menu Toggle -->
+        <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+        <label for="menu-toggle" class="menu-toggle-label" aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+        
+        <ul class="nav-menu">
+          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="register.html" class="nav-link">Register</a></li>
+          <li class="nav-item"><a href="login.html" class="nav-link">Login</a></li>
+          <li class="nav-item"><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+          <li class="nav-item"><a href="events.html" class="nav-link">Events</a></li>
+          <li class="nav-item"><a href="profile.html" class="nav-link">Profile</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+          <li class="nav-item"><a href="admin.html" class="nav-link active">Admin</a></li>
+          <li class="nav-item"><a href="faq.html" class="nav-link">FAQ</a></li>
+          <li class="nav-item"><a href="feedback.html" class="nav-link">Feedback</a></li>
+        </ul>
+      </nav>
+    </header>
+  </div>
+
+  <!-- Breadcrumbs -->
+  <div class="breadcrumbs-wrapper">
+    <nav class="container breadcrumbs" aria-label="Breadcrumb">
+      <div class="breadcrumb-item"><a href="index.html">Home</a></div>
+      <div class="breadcrumb-item active" aria-current="page">Portal Administration</div>
+    </nav>
+  </div>
+
+  <!-- Main System Layout -->
+  <main id="main-content" class="container system-layout">
+    <!-- Sidebar Navigation -->
+    <aside class="system-sidebar" aria-label="Administration Tools Sidebar">
+      <!-- Admin Avatar -->
+      <div style="text-align: center; margin-bottom: 25px; padding-bottom: 20px; border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
+        <div style="width: 80px; height: 80px; border-radius: 50%; background: var(--surface-color); border: 2px solid var(--accent-pink); display: flex; align-items: center; justify-content: center; font-size: 2.2rem; color: var(--accent-pink); margin: 0 auto 12px auto;"><i class="fa-solid fa-user-shield"></i></div>
+        <h2 style="font-size: 1.05rem; margin-bottom: 3px;">Root Administrator</h2>
+        <span style="color: var(--accent-pink); font-size: 0.8rem; font-weight: 500;">Role: Portal Moderator</span>
+      </div>
+
+      <nav aria-label="Sidebar Admin Directory">
+        <ul class="sidebar-menu">
+          <li>
+            <a href="admin.html" class="sidebar-link active" aria-current="page">
+              <i class="fa-solid fa-chart-pie"></i> Stats Overview
+            </a>
+          </li>
+          <li>
+            <a href="#admin-student-manager" class="sidebar-link">
+              <i class="fa-solid fa-users-gear"></i> Student Database
+            </a>
+          </li>
+          <li>
+            <a href="#admin-event-manager" class="sidebar-link">
+              <i class="fa-solid fa-calendar-plus"></i> Events Coordinator
+            </a>
+          </li>
+          <li>
+            <a href="#admin-notice-broadcaster" class="sidebar-link">
+              <i class="fa-solid fa-bullhorn"></i> Notice Broadcaster
+            </a>
+          </li>
+          <li>
+            <a href="dashboard.html" class="sidebar-link">
+              <i class="fa-solid fa-desktop"></i> Student View
+            </a>
+          </li>
+          <li>
+            <a href="login.html" class="sidebar-link" style="color: var(--accent-pink);">
+              <i class="fa-solid fa-arrow-right-from-bracket"></i> Admin Logout
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Admin Content Area -->
+    <section class="system-content" aria-labelledby="admin-title">
+      <div style="margin-bottom: 25px;">
+        <h1 id="admin-title" style="font-size: 1.8rem; margin-bottom: 5px;">Portal Administration Dashboard</h1>
+        <p style="color: var(--text-secondary);">Moderate active profiles, register new events, broadcast updates, and view support tickers.</p>
+      </div>
+
+      <!-- Admin Status Grid -->
+      <div class="stats-grid">
+        <article class="stat-card" aria-labelledby="stat-students-lbl">
+          <div class="stat-icon stat-purple"><i class="fa-solid fa-users"></i></div>
+          <div class="stat-info">
+            <span id="stat-students-lbl" class="stat-label">Total Registered</span>
+            <span class="stat-value">12,450</span>
+          </div>
+        </article>
+        <article class="stat-card" aria-labelledby="stat-events-lbl">
+          <div class="stat-icon stat-cyan"><i class="fa-solid fa-calendar-day"></i></div>
+          <div class="stat-info">
+            <span id="stat-events-lbl" class="stat-label">Scheduled Events</span>
+            <span class="stat-value">4 Active</span>
+          </div>
+        </article>
+        <article class="stat-card" aria-labelledby="stat-notices-lbl">
+          <div class="stat-icon stat-pink"><i class="fa-solid fa-bullhorn"></i></div>
+          <div class="stat-info">
+            <span id="stat-notices-lbl" class="stat-label">Dean Broadcasts</span>
+            <span class="stat-value">2 Active</span>
+          </div>
+        </article>
+        <article class="stat-card" aria-labelledby="stat-tickets-lbl">
+          <div class="stat-icon stat-blue"><i class="fa-solid fa-ticket"></i></div>
+          <div class="stat-info">
+            <span id="stat-tickets-lbl" class="stat-label">Open Tickets</span>
+            <span class="stat-value">5 Issues</span>
+          </div>
+        </article>
+      </div>
+
+      <!-- Student Management Database -->
+      <article id="admin-student-manager" class="dashboard-block" aria-labelledby="student-db-heading">
+        <div class="block-header">
+          <h2 id="student-db-heading" class="block-title"><i class="fa-solid fa-users-gear"></i> Student Profiles Management</h2>
+          <a href="register.html" class="btn btn-secondary" style="padding: 6px 12px; font-size: 0.8rem;"><i class="fa-solid fa-plus"></i> Add Profile</a>
+        </div>
+
+        <div class="table-responsive" style="margin: 0;">
+          <table class="table-custom" aria-label="Student Profiles Administration Table">
+            <thead>
+              <tr>
+                <th scope="col">Enrollment ID</th>
+                <th scope="col">Student Name</th>
+                <th scope="col">Department</th>
+                <th scope="col">Sem</th>
+                <th scope="col">Status</th>
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>EN1092834</td>
+                <td style="font-weight: 500; color: var(--text-primary);">Johnathan Doe</td>
+                <td>Comp. Science</td>
+                <td>5</td>
+                <td><span class="badge badge-success">Approved</span></td>
+                <td>
+                  <a href="profile.html" style="font-size: 0.8rem; margin-right: 15px;"><i class="fa-solid fa-eye"></i> View</a>
+                  <a href="#" style="font-size: 0.8rem; color: var(--accent-pink);"><i class="fa-solid fa-ban"></i> Suspend</a>
+                </td>
+              </tr>
+              <tr>
+                <td>EN1092835</td>
+                <td style="font-weight: 500; color: var(--text-primary);">Sarah Jenkins</td>
+                <td>Comp. Science</td>
+                <td>5</td>
+                <td><span class="badge badge-success">Approved</span></td>
+                <td>
+                  <a href="profile.html" style="font-size: 0.8rem; margin-right: 15px;"><i class="fa-solid fa-eye"></i> View</a>
+                  <a href="#" style="font-size: 0.8rem; color: var(--accent-pink);"><i class="fa-solid fa-ban"></i> Suspend</a>
+                </td>
+              </tr>
+              <tr>
+                <td>EN1092850</td>
+                <td style="font-weight: 500; color: var(--text-primary);">Michael Vance</td>
+                <td>Mech. Engineering</td>
+                <td>3</td>
+                <td><span class="badge badge-warning">Pending Review</span></td>
+                <td>
+                  <a href="#" style="font-size: 0.8rem; margin-right: 15px; color: var(--accent-cyan);"><i class="fa-solid fa-check"></i> Approve</a>
+                  <a href="#" style="font-size: 0.8rem; color: var(--accent-pink);"><i class="fa-solid fa-trash"></i> Drop</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </article>
+
+      <!-- Events Coordinator Manager -->
+      <article id="admin-event-manager" class="dashboard-block" aria-labelledby="event-coord-heading">
+        <div class="block-header">
+          <h2 id="event-coord-heading" class="block-title"><i class="fa-solid fa-calendar-days"></i> Registered Campus Events</h2>
+          <a href="events.html" class="btn btn-secondary" style="padding: 6px 12px; font-size: 0.8rem;"><i class="fa-solid fa-eye"></i> View Events Catalog</a>
+        </div>
+
+        <div class="table-responsive" style="margin: 0;">
+          <table class="table-custom" aria-label="Campus Events Coordination Table">
+            <thead>
+              <tr>
+                <th scope="col">Event ID</th>
+                <th scope="col">Event Title</th>
+                <th scope="col">Host Department</th>
+                <th scope="col">Date</th>
+                <th scope="col">Registrations</th>
+                <th scope="col">Moderation</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>EV-901</td>
+                <td style="font-weight: 500; color: var(--text-primary);">Annual Hackathon: Web3 & Beyond</td>
+                <td>CSE Board</td>
+                <td>July 24, 2026</td>
+                <td>148 Students</td>
+                <td>
+                  <a href="#" style="font-size: 0.8rem; color: var(--accent-cyan); margin-right: 15px;"><i class="fa-solid fa-pen-to-square"></i> Edit</a>
+                  <a href="#" style="font-size: 0.8rem; color: var(--accent-pink);"><i class="fa-solid fa-trash-can"></i> Cancel</a>
+                </td>
+              </tr>
+              <tr>
+                <td>EV-902</td>
+                <td style="font-weight: 500; color: var(--text-primary);">Ethics in Artificial Intelligence</td>
+                <td>Dean's Office</td>
+                <td>July 28, 2026</td>
+                <td>350 Students</td>
+                <td>
+                  <a href="#" style="font-size: 0.8rem; color: var(--accent-cyan); margin-right: 15px;"><i class="fa-solid fa-pen-to-square"></i> Edit</a>
+                  <a href="#" style="font-size: 0.8rem; color: var(--accent-pink);"><i class="fa-solid fa-trash-can"></i> Cancel</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </article>
+
+      <!-- Notice Management Form -->
+      <article id="admin-notice-broadcaster" class="dashboard-block" aria-labelledby="notice-broadcast-heading">
+        <h2 id="notice-broadcast-heading" class="block-title" style="margin-bottom: 20px;"><i class="fa-solid fa-bullhorn"></i> Broadcast Dean's Notice</h2>
+        
+        <form action="#" method="POST">
+          <div class="form-group-grid">
+            <div class="form-group">
+              <label for="notice-title" class="form-label">Notice Title / Subject<span class="required" aria-hidden="true">*</span></label>
+              <input type="text" id="notice-title" name="notice_title" class="form-control" placeholder="e.g. Hostels closing for Autumn Break" required aria-required="true">
+            </div>
+
+            <div class="form-group">
+              <label for="notice-category" class="form-label">Announcement Group / Category<span class="required" aria-hidden="true">*</span></label>
+              <select id="notice-category" name="notice_category" class="form-control" required aria-required="true">
+                <option value="" disabled selected>Select Category</option>
+                <option value="dean">Dean's Office Announcement</option>
+                <option value="exams">Academic Examination Board</option>
+                <option value="finance">Accounts & Fees Office</option>
+                <option value="sports">Athletics Board</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group" style="margin-top: 15px;">
+            <label for="notice-audience" class="form-label">Target Student Audience Group<span class="required" aria-hidden="true">*</span></label>
+            <div class="form-radio-group" role="radiogroup" aria-labelledby="notice-audience">
+              <label class="form-radio-label">
+                <input type="radio" name="target_aud" value="all" checked required aria-required="true"> All Semester Batches
+              </label>
+              <label class="form-radio-label">
+                <input type="radio" name="target_aud" value="freshmen"> Freshmen Only
+              </label>
+              <label class="form-radio-label">
+                <input type="radio" name="target_aud" value="seniors"> Graduating Batches
+              </label>
+            </div>
+          </div>
+
+          <div class="form-group" style="margin-top: 15px; margin-bottom: 25px;">
+            <label for="notice-content" class="form-label">Notice Content Details<span class="required" aria-hidden="true">*</span></label>
+            <textarea id="notice-content" name="notice_content" class="form-control" rows="5" placeholder="Write the announcement description. Keep paragraphs brief and informative..." required aria-required="true"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary"><i class="fa-solid fa-circle-play"></i> Broadcast Announcement</button>
+        </form>
+      </article>
+
+    </section>
+  </main>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <a href="index.html" class="logo-link">
+          <img src="images/logo.png" alt="StudentHub Logo" class="logo-img">
+          <span class="logo-text">Student<span>Hub</span></span>
+        </a>
+        <p class="footer-about-text">
+          StudentHub is a unified academic dashboard built to enhance the college experience. Access assignments, marks, attendance, events, and college notifications in a modern, streamlined environment.
+        </p>
+      </div>
+      <div class="footer-col">
+        <h2 class="footer-col-title">Quick Links</h2>
+        <ul class="footer-links">
+          <li><a href="index.html"><i class="fa-solid fa-chevron-right"></i> Home</a></li>
+          <li><a href="about.html"><i class="fa-solid fa-chevron-right"></i> About</a></li>
+          <li><a href="register.html"><i class="fa-solid fa-chevron-right"></i> Register</a></li>
+          <li><a href="login.html"><i class="fa-solid fa-chevron-right"></i> Login</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h2 class="footer-col-title">Portal Services</h2>
+        <ul class="footer-links">
+          <li><a href="dashboard.html"><i class="fa-solid fa-chevron-right"></i> Dashboard</a></li>
+          <li><a href="events.html"><i class="fa-solid fa-chevron-right"></i> Events</a></li>
+          <li><a href="profile.html"><i class="fa-solid fa-chevron-right"></i> Profile</a></li>
+          <li><a href="admin.html"><i class="fa-solid fa-chevron-right"></i> Admin Panel</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h2 class="footer-col-title">Support</h2>
+        <ul class="footer-contact-list">
+          <li><i class="fa-solid fa-location-dot"></i> College Campus Road, Sector 15, Cityville</li>
+          <li><i class="fa-solid fa-phone"></i> +1 (555) 019-2834</li>
+          <li><i class="fa-solid fa-envelope"></i> support@studenthub.edu</li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 StudentHub Academic Portal. All Rights Reserved. Designed for College Practical.</p>
+      <div class="footer-links" style="flex-direction: row; gap: 20px;">
+        <a href="faq.html">FAQ</a>
+        <a href="feedback.html">Feedback</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Back to Top Button -->
+  <a href="#" class="back-to-top" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </a>
+</body>
+</html>

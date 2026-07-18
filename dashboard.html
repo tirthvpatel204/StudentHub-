@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Dashboard - StudentHub Portal</title>
+  <meta name="description" content="View your academic statistics, attendance progress, registered courses, assignments checklist, and alerts on StudentHub.">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Skip to Content Link -->
+  <a href="#main-content" class="skip-link">Skip to Main Content</a>
+
+  <!-- Header Section -->
+  <div class="header-wrapper">
+    <header class="container">
+      <nav class="navbar" aria-label="Main Navigation">
+        <a href="index.html" class="logo-link">
+          <img src="images/logo.png" alt="StudentHub Logo" class="logo-img">
+          <span class="logo-text">Student<span>Hub</span></span>
+        </a>
+        
+        <!-- Accessible Mobile Menu Toggle -->
+        <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+        <label for="menu-toggle" class="menu-toggle-label" aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+        
+        <ul class="nav-menu">
+          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="register.html" class="nav-link">Register</a></li>
+          <li class="nav-item"><a href="login.html" class="nav-link">Login</a></li>
+          <li class="nav-item"><a href="dashboard.html" class="nav-link active">Dashboard</a></li>
+          <li class="nav-item"><a href="events.html" class="nav-link">Events</a></li>
+          <li class="nav-item"><a href="profile.html" class="nav-link">Profile</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+          <li class="nav-item"><a href="admin.html" class="nav-link">Admin</a></li>
+          <li class="nav-item"><a href="faq.html" class="nav-link">FAQ</a></li>
+          <li class="nav-item"><a href="feedback.html" class="nav-link">Feedback</a></li>
+        </ul>
+      </nav>
+    </header>
+  </div>
+
+  <!-- Breadcrumbs -->
+  <div class="breadcrumbs-wrapper">
+    <nav class="container breadcrumbs" aria-label="Breadcrumb">
+      <div class="breadcrumb-item"><a href="index.html">Home</a></div>
+      <div class="breadcrumb-item active" aria-current="page">Student Dashboard</div>
+    </nav>
+  </div>
+
+  <!-- Main System Layout -->
+  <main id="main-content" class="container system-layout">
+    <!-- Sidebar Navigation -->
+    <aside class="system-sidebar" aria-label="Dashboard Sidebar Panel">
+      <!-- Mini Profile Widget -->
+      <div style="text-align: center; margin-bottom: 25px; padding-bottom: 20px; border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
+        <img src="images/student.jpg" alt="Student Avatar: John Doe" style="width: 80px; height: 80px; border-radius: 50%; margin: 0 auto 12px auto; border: 2px solid var(--accent-cyan); object-fit: cover;">
+        <h2 style="font-size: 1.05rem; margin-bottom: 3px;">Johnathan Doe</h2>
+        <span style="color: var(--accent-cyan); font-size: 0.8rem; font-weight: 500;">Enrollment: EN1092834</span>
+      </div>
+
+      <nav aria-label="Sidebar Menu Links">
+        <ul class="sidebar-menu">
+          <li>
+            <a href="dashboard.html" class="sidebar-link active" aria-current="page">
+              <i class="fa-solid fa-house-chimney"></i> Dashboard Overview
+            </a>
+          </li>
+          <li>
+            <a href="profile.html" class="sidebar-link">
+              <i class="fa-solid fa-user-circle"></i> My Profile
+            </a>
+          </li>
+          <li>
+            <a href="events.html" class="sidebar-link">
+              <i class="fa-solid fa-calendar-check"></i> Campus Events
+            </a>
+          </li>
+          <li>
+            <a href="feedback.html" class="sidebar-link">
+              <i class="fa-solid fa-message-captions"></i> Send Feedback
+            </a>
+          </li>
+          <li>
+            <a href="faq.html" class="sidebar-link">
+              <i class="fa-solid fa-circle-question"></i> Help & support
+            </a>
+          </li>
+          <li>
+            <a href="login.html" class="sidebar-link" style="color: var(--accent-pink);">
+              <i class="fa-solid fa-arrow-right-from-bracket"></i> Sign Out
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Panel Content -->
+    <section class="system-content" aria-labelledby="dash-title">
+      <div style="margin-bottom: 25px;">
+        <h1 id="dash-title" style="font-size: 1.8rem; margin-bottom: 5px;">Student Dashboard</h1>
+        <p style="color: var(--text-secondary);">Academic Year: 2026-27 | Semester: 5 | Major: Computer Science</p>
+      </div>
+
+      <!-- Quick Metrics/Stats Grid -->
+      <div class="stats-grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
+        <article class="stat-card" aria-labelledby="stat-attendance-title">
+          <div class="stat-icon stat-purple"><i class="fa-solid fa-user-clock"></i></div>
+          <div class="stat-info">
+            <span id="stat-attendance-title" class="stat-label">Semester Attendance</span>
+            <span class="stat-value">84.5%</span>
+          </div>
+        </article>
+        <article class="stat-card" aria-labelledby="stat-cgpa-title">
+          <div class="stat-icon stat-cyan"><i class="fa-solid fa-chart-line"></i></div>
+          <div class="stat-info">
+            <span id="stat-cgpa-title" class="stat-label">Cumulative GPA</span>
+            <span class="stat-value">8.92</span>
+          </div>
+        </article>
+        <article class="stat-card" aria-labelledby="stat-credits-title">
+          <div class="stat-icon stat-pink"><i class="fa-solid fa-graduation-cap"></i></div>
+          <div class="stat-info">
+            <span id="stat-credits-title" class="stat-label">Earned Credits</span>
+            <span class="stat-value">72 / 120</span>
+          </div>
+        </article>
+        <article class="stat-card" aria-labelledby="stat-tasks-title">
+          <div class="stat-icon stat-blue"><i class="fa-solid fa-list-check"></i></div>
+          <div class="stat-info">
+            <span id="stat-tasks-title" class="stat-label">Pending Assignments</span>
+            <span class="stat-value">3</span>
+          </div>
+        </article>
+      </div>
+
+      <!-- Main Dashboard Content Split Layout -->
+      <div class="dashboard-blocks">
+        
+        <!-- Left Side: Courses & Assignments Tables -->
+        <div>
+          <!-- Registered Courses Block -->
+          <article class="dashboard-block" aria-labelledby="courses-heading">
+            <div class="block-header">
+              <h2 id="courses-heading" class="block-title"><i class="fa-solid fa-book"></i> Active Semester Courses</h2>
+              <a href="about.html" style="font-size: 0.85rem; color: var(--accent-cyan);">View Syllabus</a>
+            </div>
+            
+            <div class="table-responsive" style="margin: 0;">
+              <table class="table-custom" aria-label="Active Semester Courses Table">
+                <thead>
+                  <tr>
+                    <th scope="col">Code</th>
+                    <th scope="col">Course Name</th>
+                    <th scope="col">Credits</th>
+                    <th scope="col">Attendance</th>
+                    <th scope="col">Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>CS-501</td>
+                    <td style="font-weight: 500; color: var(--text-primary);">Web Application Architecture</td>
+                    <td>4</td>
+                    <td>92%</td>
+                    <td><span class="badge badge-success">Good</span></td>
+                  </tr>
+                  <tr>
+                    <td>CS-502</td>
+                    <td style="font-weight: 500; color: var(--text-primary);">Artificial Intelligence Basics</td>
+                    <td>4</td>
+                    <td>78%</td>
+                    <td><span class="badge badge-warning">Average</span></td>
+                  </tr>
+                  <tr>
+                    <td>CS-503</td>
+                    <td style="font-weight: 500; color: var(--text-primary);">Database Management Systems</td>
+                    <td>3</td>
+                    <td>89%</td>
+                    <td><span class="badge badge-success">Good</span></td>
+                  </tr>
+                  <tr>
+                    <td>CS-504</td>
+                    <td style="font-weight: 500; color: var(--text-primary);">Human Computer Interaction</td>
+                    <td>3</td>
+                    <td>68%</td>
+                    <td><span class="badge badge-danger">Low Attendance</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </article>
+
+          <!-- Assignments Checklist Block -->
+          <article class="dashboard-block" aria-labelledby="assignments-heading">
+            <div class="block-header">
+              <h2 id="assignments-heading" class="block-title"><i class="fa-solid fa-list-check"></i> Pending Assignments Check</h2>
+              <a href="#" style="font-size: 0.85rem; color: var(--accent-cyan);">Submit Assignments</a>
+            </div>
+
+            <div class="table-responsive" style="margin: 0;">
+              <table class="table-custom" aria-label="Pending Assignments Table">
+                <thead>
+                  <tr>
+                    <th scope="col">Subject</th>
+                    <th scope="col">Assignment Title</th>
+                    <th scope="col">Deadline Date</th>
+                    <th scope="col">Urgency</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Web App</td>
+                    <td style="font-weight: 500; color: var(--text-primary);">Practical 2: Accessible HTML5 Site</td>
+                    <td>July 22, 2026</td>
+                    <td><span class="badge badge-danger">High (4 Days)</span></td>
+                  </tr>
+                  <tr>
+                    <td>AI Basics</td>
+                    <td style="font-weight: 500; color: var(--text-primary);">Research Paper Summary: Neural Nets</td>
+                    <td>July 28, 2026</td>
+                    <td><span class="badge badge-warning">Medium</span></td>
+                  </tr>
+                  <tr>
+                    <td>DBMS</td>
+                    <td style="font-weight: 500; color: var(--text-primary);">SQL Join Queries & Schema Design</td>
+                    <td>August 04, 2026</td>
+                    <td><span class="badge badge-info">Low</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </article>
+        </div>
+
+        <!-- Right Side Sidebar Widgets: Notifications, Calendar, Links -->
+        <aside aria-label="Academic Widgets Column">
+          <!-- System Notifications -->
+          <article class="dashboard-block" aria-labelledby="notif-heading" style="padding: 20px;">
+            <h2 id="notif-heading" class="block-title" style="margin-bottom: 15px;"><i class="fa-solid fa-bell"></i> Hub Notifications</h2>
+            
+            <div class="notification-list">
+              <div class="notification-item urgent">
+                <div class="notification-content">
+                  <div class="notification-text">Fee Due Date Extension Notice</div>
+                  <div class="notification-time">2 hours ago | Accounts Office</div>
+                </div>
+              </div>
+              <div class="notification-item">
+                <div class="notification-content">
+                  <div class="notification-text">CSE Seminar: Blockchain Tech</div>
+                  <div class="notification-time">Yesterday | CSE Dept</div>
+                </div>
+              </div>
+              <div class="notification-item info">
+                <div class="notification-content">
+                  <div class="notification-text">Lab 4 Database maintenance scheduled</div>
+                  <div class="notification-time">2 days ago | Admin Support</div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Calendar Mock -->
+          <article class="dashboard-block" aria-labelledby="cal-heading" style="padding: 20px;">
+            <h2 id="cal-heading" class="block-title" style="margin-bottom: 10px;"><i class="fa-solid fa-calendar"></i> Academic Calendar</h2>
+            <div style="font-size: 0.85rem; color: var(--accent-cyan); text-align: center; font-weight: 600; margin-bottom: 10px;">July 2026</div>
+            
+            <div class="calendar-mock" aria-label="Calendar for July 2026">
+              <!-- Calendar Headers -->
+              <span class="cal-header">M</span>
+              <span class="cal-header">T</span>
+              <span class="cal-header">W</span>
+              <span class="cal-header">T</span>
+              <span class="cal-header">F</span>
+              <span class="cal-header">S</span>
+              <span class="cal-header">S</span>
+              
+              <!-- Blank spaces or previous month placeholders -->
+              <span class="cal-day">29</span>
+              <span class="cal-day">30</span>
+              <span class="cal-day">1</span>
+              <span class="cal-day">2</span>
+              <span class="cal-day">3</span>
+              <span class="cal-day">4</span>
+              <span class="cal-day">5</span>
+              
+              <!-- Month days -->
+              <span class="cal-day">6</span>
+              <span class="cal-day">7</span>
+              <span class="cal-day">8</span>
+              <span class="cal-day">9</span>
+              <span class="cal-day">10</span>
+              <span class="cal-day">11</span>
+              <span class="cal-day">12</span>
+              
+              <span class="cal-day">13</span>
+              <span class="cal-day">14</span>
+              <span class="cal-day cal-day-event" title="CSE Seminar Notice" style="border: 1px solid var(--accent-cyan);">15</span>
+              <span class="cal-day">16</span>
+              <span class="cal-day">17</span>
+              <span class="cal-day cal-day-active active">18</span>
+              <span class="cal-day">19</span>
+              
+              <span class="cal-day">20</span>
+              <span class="cal-day">21</span>
+              <span class="cal-day cal-day-event" title="HTML5 Assignment Due" style="border: 1px solid var(--accent-pink);">22</span>
+              <span class="cal-day">23</span>
+              <span class="cal-day">24</span>
+              <span class="cal-day">25</span>
+              <span class="cal-day">26</span>
+              
+              <span class="cal-day">27</span>
+              <span class="cal-day cal-day-event" title="AI Assignment Due" style="border: 1px solid var(--accent-cyan);">28</span>
+              <span class="cal-day">29</span>
+              <span class="cal-day">30</span>
+              <span class="cal-day">31</span>
+              <span class="cal-day">1</span>
+              <span class="cal-day">2</span>
+            </div>
+          </article>
+
+          <!-- Quick Actions links -->
+          <article class="dashboard-block" aria-labelledby="links-heading" style="padding: 20px;">
+            <h2 id="links-heading" class="block-title" style="margin-bottom: 15px;"><i class="fa-solid fa-rocket"></i> Portal Quick Actions</h2>
+            <ul class="footer-links" style="gap: 10px;">
+              <li><a href="profile.html"><i class="fa-solid fa-address-card"></i> Edit Contact Info</a></li>
+              <li><a href="register.html"><i class="fa-solid fa-plus-circle"></i> Add Elective Subject</a></li>
+              <li><a href="events.html"><i class="fa-solid fa-ticket-simple"></i> Request Event Passes</a></li>
+              <li><a href="feedback.html"><i class="fa-solid fa-bullhorn"></i> Submit Course Feedback</a></li>
+            </ul>
+          </article>
+        </aside>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <a href="index.html" class="logo-link">
+          <img src="images/logo.png" alt="StudentHub Logo" class="logo-img">
+          <span class="logo-text">Student<span>Hub</span></span>
+        </a>
+        <p class="footer-about-text">
+          StudentHub is a unified academic dashboard built to enhance the college experience. Access assignments, marks, attendance, events, and college notifications in a modern, streamlined environment.
+        </p>
+      </div>
+      <div class="footer-col">
+        <h2 class="footer-col-title">Quick Links</h2>
+        <ul class="footer-links">
+          <li><a href="index.html"><i class="fa-solid fa-chevron-right"></i> Home</a></li>
+          <li><a href="about.html"><i class="fa-solid fa-chevron-right"></i> About</a></li>
+          <li><a href="register.html"><i class="fa-solid fa-chevron-right"></i> Register</a></li>
+          <li><a href="login.html"><i class="fa-solid fa-chevron-right"></i> Login</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h2 class="footer-col-title">Portal Services</h2>
+        <ul class="footer-links">
+          <li><a href="dashboard.html"><i class="fa-solid fa-chevron-right"></i> Dashboard</a></li>
+          <li><a href="events.html"><i class="fa-solid fa-chevron-right"></i> Events</a></li>
+          <li><a href="profile.html"><i class="fa-solid fa-chevron-right"></i> Profile</a></li>
+          <li><a href="admin.html"><i class="fa-solid fa-chevron-right"></i> Admin Panel</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h2 class="footer-col-title">Support</h2>
+        <ul class="footer-contact-list">
+          <li><i class="fa-solid fa-location-dot"></i> College Campus Road, Sector 15, Cityville</li>
+          <li><i class="fa-solid fa-phone"></i> +1 (555) 019-2834</li>
+          <li><i class="fa-solid fa-envelope"></i> support@studenthub.edu</li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 StudentHub Academic Portal. All Rights Reserved. Designed for College Practical.</p>
+      <div class="footer-links" style="flex-direction: row; gap: 20px;">
+        <a href="faq.html">FAQ</a>
+        <a href="feedback.html">Feedback</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Back to Top Button -->
+  <a href="#" class="back-to-top" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </a>
+</body>
+</html>

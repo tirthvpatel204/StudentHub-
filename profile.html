@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Profile - StudentHub Portal</title>
+  <meta name="description" content="View personal details, academic grades, verified skills, certificates, and research projects of Johnathan Doe on StudentHub.">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Skip to Content Link -->
+  <a href="#main-content" class="skip-link">Skip to Main Content</a>
+
+  <!-- Header Section -->
+  <div class="header-wrapper">
+    <header class="container">
+      <nav class="navbar" aria-label="Main Navigation">
+        <a href="index.html" class="logo-link">
+          <img src="images/logo.png" alt="StudentHub Logo" class="logo-img">
+          <span class="logo-text">Student<span>Hub</span></span>
+        </a>
+        
+        <!-- Accessible Mobile Menu Toggle -->
+        <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+        <label for="menu-toggle" class="menu-toggle-label" aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+        
+        <ul class="nav-menu">
+          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="register.html" class="nav-link">Register</a></li>
+          <li class="nav-item"><a href="login.html" class="nav-link">Login</a></li>
+          <li class="nav-item"><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+          <li class="nav-item"><a href="events.html" class="nav-link">Events</a></li>
+          <li class="nav-item"><a href="profile.html" class="nav-link active">Profile</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+          <li class="nav-item"><a href="admin.html" class="nav-link">Admin</a></li>
+          <li class="nav-item"><a href="faq.html" class="nav-link">FAQ</a></li>
+          <li class="nav-item"><a href="feedback.html" class="nav-link">Feedback</a></li>
+        </ul>
+      </nav>
+    </header>
+  </div>
+
+  <!-- Breadcrumbs -->
+  <div class="breadcrumbs-wrapper">
+    <nav class="container breadcrumbs" aria-label="Breadcrumb">
+      <div class="breadcrumb-item"><a href="index.html">Home</a></div>
+      <div class="breadcrumb-item"><a href="dashboard.html">Dashboard</a></div>
+      <div class="breadcrumb-item active" aria-current="page">Student Profile</div>
+    </nav>
+  </div>
+
+  <!-- Main Content Area -->
+  <main id="main-content" class="container" style="margin-top: 30px;">
+    <!-- Profile Header Card -->
+    <section aria-label="Profile Cover & Banner">
+      <div class="profile-header-card">
+        <div class="profile-cover"></div>
+        <div class="profile-avatar-container">
+          <img src="images/student.jpg" alt="Student Profile: Johnathan Doe" class="profile-avatar">
+          <div class="profile-basic-info">
+            <h1 class="profile-name">Johnathan Doe</h1>
+            <span class="profile-role"><i class="fa-solid fa-graduation-cap"></i> Undergraduate, CSE Department</span>
+          </div>
+        </div>
+        <div class="profile-meta-bar">
+          <div style="display: flex; gap: 30px; font-size: 0.9rem; color: var(--text-secondary);">
+            <span><i class="fa-solid fa-calendar-check" style="color: var(--accent-cyan);"></i> Batch: 2024-2028</span>
+            <span><i class="fa-solid fa-award" style="color: var(--accent-pink);"></i> CGPA: 8.92</span>
+            <span><i class="fa-solid fa-circle-check" style="color: #10b981;"></i> Status: Enrolled</span>
+          </div>
+          <div class="profile-socials">
+            <a href="#" class="social-btn" aria-label="Johnathan Doe GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="#" class="social-btn" aria-label="Johnathan Doe LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" class="social-btn" aria-label="Johnathan Doe Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Profile Split Grid -->
+    <div class="profile-grid">
+      <!-- Left Column: Personal Info -->
+      <aside aria-label="Personal Information details">
+        <div class="card" style="padding: 25px; margin-bottom: 25px;">
+          <h2 style="font-size: 1.15rem; margin-bottom: 20px; color: var(--accent-cyan); display: flex; align-items: center; gap: 8px;">
+            <i class="fa-solid fa-address-card"></i> Personal Information
+          </h2>
+          
+          <div class="info-list">
+            <div class="info-item">
+              <span class="info-label">Full Name</span>
+              <span class="info-value">Johnathan V. Doe</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Enrollment Number</span>
+              <span class="info-value">EN1092834</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Date of Birth</span>
+              <span class="info-value">October 14, 2005</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Institutional Email</span>
+              <span class="info-value">john.doe@studenthub.edu</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Phone Number</span>
+              <span class="info-value">555-019-2834</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Residential Address</span>
+              <span class="info-value">452 College Intramural Road, Residence Hall B, Room 104, Cityville</span>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Right Column: Skills, Projects, Achievements -->
+      <section aria-labelledby="academic-details-heading">
+        <h2 id="academic-details-heading" class="visually-hidden" style="display: none;">Academic Details</h2>
+        
+        <!-- Skills Badge Board -->
+        <article class="card" style="padding: 25px; margin-bottom: 25px;" aria-labelledby="skills-heading">
+          <h3 id="skills-heading" style="font-size: 1.15rem; margin-bottom: 15px; display: flex; align-items: center; gap: 8px;"><i class="fa-solid fa-brain"></i> Verified Skills</h3>
+          <div class="badge-container">
+            <span class="skill-badge">HTML5 / CSS3 Layouts</span>
+            <span class="skill-badge">UI/UX Interface Design</span>
+            <span class="skill-badge">Python Coding</span>
+            <span class="skill-badge">Database Schemas (SQL)</span>
+            <span class="skill-badge">React & Vite Web Apps</span>
+            <span class="skill-badge">Git & Version Control</span>
+            <span class="skill-badge">A11y Accessibility Guidelines</span>
+          </div>
+        </article>
+
+        <!-- Achievements & Certificates -->
+        <article class="card" style="padding: 25px; margin-bottom: 25px;" aria-labelledby="achieve-heading">
+          <h3 id="achieve-heading" style="font-size: 1.15rem; margin-bottom: 15px; display: flex; align-items: center; gap: 8px;"><i class="fa-solid fa-trophy"></i> Achievements & Certificates</h3>
+          <ul class="footer-links" style="gap: 15px;">
+            <li style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255, 255, 255, 0.03); padding-bottom: 8px;">
+              <span><i class="fa-solid fa-award" style="color: var(--accent-pink); margin-right: 8px;"></i> Dean's Honor List (Semesters 1, 2 & 4)</span>
+              <a href="#" style="font-size: 0.8rem; font-weight: 600;"><i class="fa-solid fa-download"></i> View PDF</a>
+            </li>
+            <li style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255, 255, 255, 0.03); padding-bottom: 8px;">
+              <span><i class="fa-solid fa-award" style="color: var(--accent-pink); margin-right: 8px;"></i> AWS Cloud Practitioner Certification</span>
+              <a href="#" style="font-size: 0.8rem; font-weight: 600;"><i class="fa-solid fa-download"></i> View Credential</a>
+            </li>
+            <li style="display: flex; justify-content: space-between; align-items: center; padding-bottom: 8px;">
+              <span><i class="fa-solid fa-award" style="color: var(--accent-pink); margin-right: 8px;"></i> 1st Runner-up, Cityville Tech Sprint Hackathon</span>
+              <a href="#" style="font-size: 0.8rem; font-weight: 600;"><i class="fa-solid fa-download"></i> View Certificate</a>
+            </li>
+          </ul>
+        </article>
+
+        <!-- Projects Showcase -->
+        <article aria-labelledby="projects-heading">
+          <h3 id="projects-heading" style="font-size: 1.15rem; margin-bottom: 15px; display: flex; align-items: center; gap: 8px;"><i class="fa-solid fa-laptop-code"></i> Project Portfolios</h3>
+          
+          <div class="grid-layout" style="grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 15px;">
+            <div class="card" style="padding: 20px;">
+              <span style="font-size: 0.75rem; color: var(--accent-cyan); font-weight: 700; text-transform: uppercase;">Front-End Design</span>
+              <h4 style="font-size: 1rem; margin-top: 5px; margin-bottom: 10px;">Accessible Campus Library Interface</h4>
+              <p style="font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 15px;">Developed an alternative keyboard-friendly catalog reader for blind students using strict WAI-ARIA and HTML5 tags.</p>
+              <a href="#" style="font-size: 0.8rem; font-weight: 600; display: inline-flex; align-items: center; gap: 5px;">View Code <i class="fa-solid fa-chevron-right"></i></a>
+            </div>
+            
+            <div class="card" style="padding: 20px;">
+              <span style="font-size: 0.75rem; color: var(--accent-pink); font-weight: 700; text-transform: uppercase;">Database (DBMS)</span>
+              <h4 style="font-size: 1rem; margin-top: 5px; margin-bottom: 10px;">University Hostel Allocator</h4>
+              <p style="font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 15px;">Designed database relations and SQL triggers to automate roommate matching and room distributions based on preferences.</p>
+              <a href="#" style="font-size: 0.8rem; font-weight: 600; display: inline-flex; align-items: center; gap: 5px;">View Code <i class="fa-solid fa-chevron-right"></i></a>
+            </div>
+          </div>
+        </article>
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <a href="index.html" class="logo-link">
+          <img src="images/logo.png" alt="StudentHub Logo" class="logo-img">
+          <span class="logo-text">Student<span>Hub</span></span>
+        </a>
+        <p class="footer-about-text">
+          StudentHub is a unified academic dashboard built to enhance the college experience. Access assignments, marks, attendance, events, and college notifications in a modern, streamlined environment.
+        </p>
+      </div>
+      <div class="footer-col">
+        <h2 class="footer-col-title">Quick Links</h2>
+        <ul class="footer-links">
+          <li><a href="index.html"><i class="fa-solid fa-chevron-right"></i> Home</a></li>
+          <li><a href="about.html"><i class="fa-solid fa-chevron-right"></i> About</a></li>
+          <li><a href="register.html"><i class="fa-solid fa-chevron-right"></i> Register</a></li>
+          <li><a href="login.html"><i class="fa-solid fa-chevron-right"></i> Login</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h2 class="footer-col-title">Portal Services</h2>
+        <ul class="footer-links">
+          <li><a href="dashboard.html"><i class="fa-solid fa-chevron-right"></i> Dashboard</a></li>
+          <li><a href="events.html"><i class="fa-solid fa-chevron-right"></i> Events</a></li>
+          <li><a href="profile.html"><i class="fa-solid fa-chevron-right"></i> Profile</a></li>
+          <li><a href="admin.html"><i class="fa-solid fa-chevron-right"></i> Admin Panel</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h2 class="footer-col-title">Support</h2>
+        <ul class="footer-contact-list">
+          <li><i class="fa-solid fa-location-dot"></i> College Campus Road, Sector 15, Cityville</li>
+          <li><i class="fa-solid fa-phone"></i> +1 (555) 019-2834</li>
+          <li><i class="fa-solid fa-envelope"></i> support@studenthub.edu</li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 StudentHub Academic Portal. All Rights Reserved. Designed for College Practical.</p>
+      <div class="footer-links" style="flex-direction: row; gap: 20px;">
+        <a href="faq.html">FAQ</a>
+        <a href="feedback.html">Feedback</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Back to Top Button -->
+  <a href="#" class="back-to-top" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </a>
+</body>
+</html>

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campus Events - StudentHub Portal</title>
+  <meta name="description" content="Browse and register for upcoming technological hackathons, academic seminars, and cultural festivals at StudentHub.">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Skip to Content Link -->
+  <a href="#main-content" class="skip-link">Skip to Main Content</a>
+
+  <!-- Header Section -->
+  <div class="header-wrapper">
+    <header class="container">
+      <nav class="navbar" aria-label="Main Navigation">
+        <a href="index.html" class="logo-link">
+          <img src="images/logo.png" alt="StudentHub Logo" class="logo-img">
+          <span class="logo-text">Student<span>Hub</span></span>
+        </a>
+        
+        <!-- Accessible Mobile Menu Toggle -->
+        <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+        <label for="menu-toggle" class="menu-toggle-label" aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+        
+        <ul class="nav-menu">
+          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="register.html" class="nav-link">Register</a></li>
+          <li class="nav-item"><a href="login.html" class="nav-link">Login</a></li>
+          <li class="nav-item"><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+          <li class="nav-item"><a href="events.html" class="nav-link active">Events</a></li>
+          <li class="nav-item"><a href="profile.html" class="nav-link">Profile</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+          <li class="nav-item"><a href="admin.html" class="nav-link">Admin</a></li>
+          <li class="nav-item"><a href="faq.html" class="nav-link">FAQ</a></li>
+          <li class="nav-item"><a href="feedback.html" class="nav-link">Feedback</a></li>
+        </ul>
+      </nav>
+    </header>
+  </div>
+
+  <!-- Breadcrumbs -->
+  <div class="breadcrumbs-wrapper">
+    <nav class="container breadcrumbs" aria-label="Breadcrumb">
+      <div class="breadcrumb-item"><a href="index.html">Home</a></div>
+      <div class="breadcrumb-item active" aria-current="page">Campus Events Catalog</div>
+    </nav>
+  </div>
+
+  <!-- Main Content Area -->
+  <main id="main-content" class="container" style="margin-top: 30px;">
+    <!-- Page Header Title -->
+    <section aria-labelledby="events-heading" style="margin-bottom: 20px;">
+      <h1 id="events-heading" class="section-title">Upcoming Campus Events</h1>
+      <p class="section-subtitle">Discover tech workshops, sports meets, cultural nights, and register directly.</p>
+    </section>
+
+    <!-- Search and Filter Bar -->
+    <section aria-label="Search and Filter Controls">
+      <div class="filter-search-wrapper">
+        <div class="search-input-group">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" class="form-control" placeholder="Search events by title, keyword, or speaker..." aria-label="Search events">
+        </div>
+        
+        <div class="filter-select-group">
+          <label for="event-category-filter" class="form-label" style="margin: 0; white-space: nowrap;">Category:</label>
+          <select id="event-category-filter" class="form-control" style="width: auto; min-width: 150px;">
+            <option value="all">All Categories</option>
+            <option value="tech">Technological</option>
+            <option value="seminars">Seminars</option>
+            <option value="cultural">Cultural</option>
+            <option value="sports">Athletics & Sports</option>
+          </select>
+        </div>
+      </div>
+    </section>
+
+    <!-- Events Grid Layout -->
+    <section aria-label="Events Cards Grid" style="margin-bottom: 40px;">
+      <div class="grid-layout" style="grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));">
+        
+        <!-- Event 1 -->
+        <article class="event-card">
+          <div class="event-banner-container">
+            <img src="images/banner.jpg" alt="Vibrant coding screens background" class="event-banner">
+            <div class="event-date-badge">JUL<span>24</span></div>
+          </div>
+          <div class="event-body">
+            <span style="font-size: 0.75rem; color: var(--accent-pink); font-weight: 700; text-transform: uppercase; margin-bottom: 8px;">Technological</span>
+            <h2 class="event-title">Annual Hackathon: Web3 & Beyond</h2>
+            <div class="event-meta">
+              <span><i class="fa-solid fa-clock"></i> 09:00 AM - 05:00 PM</span>
+              <span><i class="fa-solid fa-location-dot"></i> Lab Complex 4</span>
+            </div>
+            <p class="event-desc">
+              Assemble in groups of 4 to design decentralised apps addressing community challenges. Winners receive cash prizes, technical certifications, and direct mentorship from industry partners.
+            </p>
+            <div class="event-speaker">
+              <div class="event-speaker-icon"><i class="fa-solid fa-user-tie"></i></div>
+              <div>Judged by: Tech Board Alumni</div>
+            </div>
+            <a href="register.html" class="btn btn-primary" style="width: 100%;">Register for Event</a>
+          </div>
+        </article>
+
+        <!-- Event 2 -->
+        <article class="event-card">
+          <div class="event-banner-container">
+            <img src="images/hero.jpg" alt="Large campus conference room filled with students" class="event-banner">
+            <div class="event-date-badge">JUL<span>28</span></div>
+          </div>
+          <div class="event-body">
+            <span style="font-size: 0.75rem; color: var(--accent-cyan); font-weight: 700; text-transform: uppercase; margin-bottom: 8px;">Seminars</span>
+            <h2 class="event-title">Ethics in Artificial Intelligence</h2>
+            <div class="event-meta">
+              <span><i class="fa-solid fa-clock"></i> 02:00 PM - 04:00 PM</span>
+              <span><i class="fa-solid fa-location-dot"></i> Main Seminar Hall</span>
+            </div>
+            <p class="event-desc">
+              Understand the impact of massive neural nets, algorithmic bias, copyright concerns, and the regulatory challenges that designers face when building advanced machine learning platforms.
+            </p>
+            <div class="event-speaker">
+              <div class="event-speaker-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+              <div>Speaker: Dr. Rebecca Stone, MIT</div>
+            </div>
+            <a href="register.html" class="btn btn-primary" style="width: 100%;">Register for Event</a>
+          </div>
+        </article>
+
+        <!-- Event 3 -->
+        <article class="event-card">
+          <div class="event-banner-container">
+            <img src="images/banner.jpg" alt="Abstract glowing lines of data connection" class="event-banner">
+            <div class="event-date-badge">AUG<span>03</span></div>
+          </div>
+          <div class="event-body">
+            <span style="font-size: 0.75rem; color: var(--accent-pink); font-weight: 700; text-transform: uppercase; margin-bottom: 8px;">Technological</span>
+            <h2 class="event-title">AWS Cloud Practitioner Workshop</h2>
+            <div class="event-meta">
+              <span><i class="fa-solid fa-clock"></i> 10:00 AM - 01:00 PM</span>
+              <span><i class="fa-solid fa-location-dot"></i> Seminar Room 102</span>
+            </div>
+            <p class="event-desc">
+              A comprehensive coding boot camp covering simple storage services, compute instances, database endpoints, VPC networking, and security profiles. Ideal for database beginners.
+            </p>
+            <div class="event-speaker">
+              <div class="event-speaker-icon"><i class="fa-solid fa-user-gear"></i></div>
+              <div>Speaker: AWS Certified Architects</div>
+            </div>
+            <a href="register.html" class="btn btn-primary" style="width: 100%;">Register for Event</a>
+          </div>
+        </article>
+
+        <!-- Event 4 -->
+        <article class="event-card">
+          <div class="event-banner-container">
+            <img src="images/hero.jpg" alt="Group of students on stage playing instruments" class="event-banner">
+            <div class="event-date-badge">AUG<span>08</span></div>
+          </div>
+          <div class="event-body">
+            <span style="font-size: 0.75rem; color: var(--primary-blue); font-weight: 700; text-transform: uppercase; margin-bottom: 8px;">Cultural</span>
+            <h2 class="event-title">SoundWaves: Music & Drama Night</h2>
+            <div class="event-meta">
+              <span><i class="fa-solid fa-clock"></i> 06:00 PM - 09:30 PM</span>
+              <span><i class="fa-solid fa-location-dot"></i> College Amphitheater</span>
+            </div>
+            <p class="event-desc">
+              Unwind with an evening of spectacular theater pieces, instrumental ensembles, and contemporary vocal music performances prepared by the college cultural union. Entrance is free.
+            </p>
+            <div class="event-speaker">
+              <div class="event-speaker-icon"><i class="fa-solid fa-masks-theater"></i></div>
+              <div>Hosted by: Arts & Drama Club</div>
+            </div>
+            <a href="register.html" class="btn btn-primary" style="width: 100%;">Register for Event</a>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <a href="index.html" class="logo-link">
+          <img src="images/logo.png" alt="StudentHub Logo" class="logo-img">
+          <span class="logo-text">Student<span>Hub</span></span>
+        </a>
+        <p class="footer-about-text">
+          StudentHub is a unified academic dashboard built to enhance the college experience. Access assignments, marks, attendance, events, and college notifications in a modern, streamlined environment.
+        </p>
+      </div>
+      <div class="footer-col">
+        <h2 class="footer-col-title">Quick Links</h2>
+        <ul class="footer-links">
+          <li><a href="index.html"><i class="fa-solid fa-chevron-right"></i> Home</a></li>
+          <li><a href="about.html"><i class="fa-solid fa-chevron-right"></i> About</a></li>
+          <li><a href="register.html"><i class="fa-solid fa-chevron-right"></i> Register</a></li>
+          <li><a href="login.html"><i class="fa-solid fa-chevron-right"></i> Login</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h2 class="footer-col-title">Portal Services</h2>
+        <ul class="footer-links">
+          <li><a href="dashboard.html"><i class="fa-solid fa-chevron-right"></i> Dashboard</a></li>
+          <li><a href="events.html"><i class="fa-solid fa-chevron-right"></i> Events</a></li>
+          <li><a href="profile.html"><i class="fa-solid fa-chevron-right"></i> Profile</a></li>
+          <li><a href="admin.html"><i class="fa-solid fa-chevron-right"></i> Admin Panel</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h2 class="footer-col-title">Support</h2>
+        <ul class="footer-contact-list">
+          <li><i class="fa-solid fa-location-dot"></i> College Campus Road, Sector 15, Cityville</li>
+          <li><i class="fa-solid fa-phone"></i> +1 (555) 019-2834</li>
+          <li><i class="fa-solid fa-envelope"></i> support@studenthub.edu</li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 StudentHub Academic Portal. All Rights Reserved. Designed for College Practical.</p>
+      <div class="footer-links" style="flex-direction: row; gap: 20px;">
+        <a href="faq.html">FAQ</a>
+        <a href="feedback.html">Feedback</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Back to Top Button -->
+  <a href="#" class="back-to-top" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </a>
+</body>
+</html>
